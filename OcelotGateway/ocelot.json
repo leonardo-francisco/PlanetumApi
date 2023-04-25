@@ -1,0 +1,59 @@
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/Authentication/login",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7056
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/auth",
+            "UpdstreamHttpMethod": [ "Post" ]
+
+        },
+        {
+            "DownstreamPathTemplate": "/api/Inspections/allInspections",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7239
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/inspection",
+            "UpdstreamHttpMethod": [ "Get" ]
+
+        },
+        {
+            "DownstreamPathTemplate": "/api/Inspections/createInspection",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 7239
+                }
+            ],
+            "UpstreamPathTemplate": "/gateway/create-inspection",
+            "UpdstreamHttpMethod": [ "Post" ]
+
+        }
+        //{
+        //    "DownstreamPathTemplate": "/api/Authentication",
+        //    "DownstreamScheme": "https",
+        //    "DownstreamHost": "localhost",
+        //    "DownstreamPort": 7056,
+        //    "UpstreamPathTemplate": "/gateway/Authentication/login",
+        //    "UpstreamHttpMethod": [ "Post" ]
+        //},
+        //{
+        //    "DownstreamPathTemplate": "/api/Authentication",
+        //    "DownstreamScheme": "https",
+        //    "DownstreamHost": "localhost",
+        //    "DownstreamPort": 7239,
+        //    "UpstreamPathTemplate": "/Authentication/login",
+        //    "UpstreamHttpMethod": [ "Post" ]
+        //}
+    ]
+}

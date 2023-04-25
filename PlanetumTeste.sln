@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{9416FE36-79D1-4683-B64F-7563BEE73EE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetumAuthenticationMicroservice", "PlanetumAuthenticationMicroservice\PlanetumAuthenticationMicroservice.csproj", "{A8F177FE-3BDC-4D9E-A015-6E967D95520F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetumInspectionMicroservice", "PlanetumInspectionMicroservice\PlanetumInspectionMicroservice.csproj", "{EBA6736F-7894-4B9D-9650-9B6C526E816D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{2A52917B-8C68-4909-9DB1-FF0D1A0056BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{087A7BE7-D876-470D-A278-259A0DBC5019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetumDomain", "PlanetumDomain\PlanetumDomain.csproj", "{7A3DC9B6-17FA-402F-AE6D-EC7D5C0B9BFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetumInfrastructure", "PlanetumInfrastructure\PlanetumInfrastructure.csproj", "{F6BE4F6F-8462-479D-B92B-F1F80E6D9D2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotGateway", "OcelotGateway\OcelotGateway.csproj", "{3C5726BC-82D9-45B9-AC21-2E441FCF5FDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8F177FE-3BDC-4D9E-A015-6E967D95520F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F177FE-3BDC-4D9E-A015-6E967D95520F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F177FE-3BDC-4D9E-A015-6E967D95520F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F177FE-3BDC-4D9E-A015-6E967D95520F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBA6736F-7894-4B9D-9650-9B6C526E816D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBA6736F-7894-4B9D-9650-9B6C526E816D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBA6736F-7894-4B9D-9650-9B6C526E816D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBA6736F-7894-4B9D-9650-9B6C526E816D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A3DC9B6-17FA-402F-AE6D-EC7D5C0B9BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A3DC9B6-17FA-402F-AE6D-EC7D5C0B9BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A3DC9B6-17FA-402F-AE6D-EC7D5C0B9BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A3DC9B6-17FA-402F-AE6D-EC7D5C0B9BFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6BE4F6F-8462-479D-B92B-F1F80E6D9D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6BE4F6F-8462-479D-B92B-F1F80E6D9D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6BE4F6F-8462-479D-B92B-F1F80E6D9D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6BE4F6F-8462-479D-B92B-F1F80E6D9D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C5726BC-82D9-45B9-AC21-2E441FCF5FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C5726BC-82D9-45B9-AC21-2E441FCF5FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C5726BC-82D9-45B9-AC21-2E441FCF5FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C5726BC-82D9-45B9-AC21-2E441FCF5FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A8F177FE-3BDC-4D9E-A015-6E967D95520F} = {9416FE36-79D1-4683-B64F-7563BEE73EE0}
+		{EBA6736F-7894-4B9D-9650-9B6C526E816D} = {9416FE36-79D1-4683-B64F-7563BEE73EE0}
+		{7A3DC9B6-17FA-402F-AE6D-EC7D5C0B9BFB} = {2A52917B-8C68-4909-9DB1-FF0D1A0056BB}
+		{F6BE4F6F-8462-479D-B92B-F1F80E6D9D2B} = {087A7BE7-D876-470D-A278-259A0DBC5019}
+		{3C5726BC-82D9-45B9-AC21-2E441FCF5FDA} = {9416FE36-79D1-4683-B64F-7563BEE73EE0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9264477B-DB83-4249-8C8E-679B60540682}
+	EndGlobalSection
+EndGlobal
