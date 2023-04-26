@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetumInfrastructure", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotGateway", "OcelotGateway\OcelotGateway.csproj", "{3C5726BC-82D9-45B9-AC21-2E441FCF5FDA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{14B8CFB7-FBFC-4EB4-99DC-B7D6CCA23BF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlanetumApplication", "PlanetumApplication\PlanetumApplication.csproj", "{9AE9668B-F4D3-47B3-BD1E-49BB2C4CE8AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,10 @@ Global
 		{3C5726BC-82D9-45B9-AC21-2E441FCF5FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C5726BC-82D9-45B9-AC21-2E441FCF5FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C5726BC-82D9-45B9-AC21-2E441FCF5FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AE9668B-F4D3-47B3-BD1E-49BB2C4CE8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AE9668B-F4D3-47B3-BD1E-49BB2C4CE8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AE9668B-F4D3-47B3-BD1E-49BB2C4CE8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AE9668B-F4D3-47B3-BD1E-49BB2C4CE8AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,6 +63,7 @@ Global
 		{7A3DC9B6-17FA-402F-AE6D-EC7D5C0B9BFB} = {2A52917B-8C68-4909-9DB1-FF0D1A0056BB}
 		{F6BE4F6F-8462-479D-B92B-F1F80E6D9D2B} = {087A7BE7-D876-470D-A278-259A0DBC5019}
 		{3C5726BC-82D9-45B9-AC21-2E441FCF5FDA} = {9416FE36-79D1-4683-B64F-7563BEE73EE0}
+		{9AE9668B-F4D3-47B3-BD1E-49BB2C4CE8AD} = {14B8CFB7-FBFC-4EB4-99DC-B7D6CCA23BF8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9264477B-DB83-4249-8C8E-679B60540682}

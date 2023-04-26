@@ -1,9 +1,14 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using FluentValidation;
+using FluentValidation.AspNetCore;
+using FluentValidation.Results;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using PlanetumDomain.Entities;
-using PlanetumDomain.Interfaces;
+using PlanetumApplication.Dto;
+using PlanetumApplication.Services;
+using PlanetumApplication.Validator;
+
 
 namespace PlanetumInspectionMicroservice.Controllers
 {
@@ -12,28 +17,36 @@ namespace PlanetumInspectionMicroservice.Controllers
     [ApiController]
     public class InspectionsController : ControllerBase
     {
-        private readonly IInspectionRepository _inspectionRepository;
+        private readonly IInspectionService _service;
+        private readonly IValidator<InspectionDto> _validator;
 
-        public InspectionsController(IInspectionRepository inspectionRepository)
-        {
-            _inspectionRepository = inspectionRepository;
+        public InspectionsController(IInspectionService service, IValidator<InspectionDto> validator)
+        {           
+            _service = service; 
+            _validator = validator;
         }
 
         [HttpGet]
         [Route("allInspections")]
         public async Task<IActionResult> GetAllInspections()
         {
-            var inspections = await _inspectionRepository.GetAll();
+            var inspections = await _service.GetAllInspections();
             return Ok(inspections);
         }
 
         [HttpPost]
         [Route("createInspection")]
-        public async Task<IActionResult> CreateInspection([FromBody] Inspection inspection)
+        public async Task<IActionResult> CreateInspection([FromBody] InspectionDto inspection)
         {
             try
             {
-                var response = await _inspectionRepository.Create(inspection);
+                ValidationResult result = await _validator.ValidateAsync(inspection);
+                if (!result.IsValid)
+                {
+                    result.AddToModelState(this.ModelState, null);
+                    return StatusCode(StatusCodes.Status400BadRequest, ModelState);
+                }
+                var response = await _service.CreateInspection(inspection);
                 return Ok(response);
             }
             catch (Exception ex)

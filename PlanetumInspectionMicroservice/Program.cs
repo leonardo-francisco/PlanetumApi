@@ -1,10 +1,18 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using PlanetumApplication.Dto;
+using PlanetumApplication.Mappers;
+using PlanetumApplication.Services;
+using PlanetumApplication.Validator;
 using PlanetumDomain.Interfaces;
 using PlanetumInfrastructure.Data;
 using PlanetumInfrastructure.Repositories;
+using System.Reflection;
 using System.Text;
 
 
@@ -13,10 +21,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+                
 
 // Add DbContext
 var connectionString = builder.Configuration.GetConnectionString("PlanetumConnection");
 builder.Services.AddDbContext<PlanetumDbContext>(options => options.UseSqlServer(connectionString));
+
+// Add Service
+builder.Services.AddScoped<IInspectionService, InspectionService>();
 
 // Add Repository
 builder.Services.AddScoped<IInspectionRepository, InspectionRepository>();
@@ -72,6 +84,12 @@ builder.Services.AddAuthentication(x =>
     };
 });
 
+//Adding Auto Mapper Configuration
+builder.Services.AddAutoMapper(typeof(ConfigurationMapping));
+
+//Adding Fluent Validation
+builder.Services.AddScoped<IValidator<InspectionDto>, InspectionsValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining(typeof(InspectionsValidator));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

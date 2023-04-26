@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PlanetumApplication\PlanetumApplication.csproj" />
     <ProjectReference Include="..\PlanetumInfrastructure\PlanetumInfrastructure.csproj" />
   </ItemGroup>
 
